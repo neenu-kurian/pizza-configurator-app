@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {base} from '../constants'
+import GetSelectedBase from '../actions/GetSelectedBase'
 
 class PizzaBase extends Component {
 
-    
+    constructor() {
+        super()
+        this.handleChange = this
+            .handleChange
+            .bind(this)
+    }
+
+    handleChange(e) {
+
+        this.props.GetSelectedBase(e.target.title)
+        
+    }
 
     render() {
         return (
@@ -12,8 +24,10 @@ class PizzaBase extends Component {
             <div>
 
             <label className="base-label">Select your base</label>
-            <div>
+            
 
+            <div>
+                 <br/>
                 <table className="table-style-three">
                     <thead>
                         <tr>
@@ -35,7 +49,7 @@ class PizzaBase extends Component {
                                                     title={pizzabase.name}
                                                     name={'name'}
                                                     type={'radio'}
-                                                   /></td>
+                                                    onChange={this.handleChange}/></td>
 
                                             <td>{pizzabase.id}</td>
                                             <td>{pizzabase.name}</td>
@@ -54,4 +68,6 @@ class PizzaBase extends Component {
     }
 }
 
-export default PizzaBase
+
+
+export default connect(null,{GetSelectedBase})(PizzaBase)
