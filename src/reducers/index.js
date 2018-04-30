@@ -1,5 +1,5 @@
-import PizzaSelectedBase from './PizzaSelectedBase'
+import PizzaSelected from './PizzaSelected'
 
 export default {
-    PizzaSelectedBase
+    PizzaSelected
 }

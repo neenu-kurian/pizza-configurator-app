@@ -47,3 +47,6 @@ export const toppings = [
     'Cherry Tomatos',
     'Chicken'
 ]
+
+
+export const TotalPrice=0;

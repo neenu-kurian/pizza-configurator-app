@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {base} from '../constants'
-import GetSelectedBase from '../actions/GetSelectedBase'
+import {sauce} from '../constants'
+import GetSelectedSauce from '../actions/GetSelectedSauce'
 
 
-class PizzaBase extends Component {
+class PizzaSauce extends Component {
     
       
     constructor() {
@@ -21,7 +21,7 @@ class PizzaBase extends Component {
        // 
        this.setState({id:e.target.key,name:e.target.title,price:e.target.value})
      
-       this.props.GetSelectedBase(e.target.title)
+       this.props.GetSelectedSauce(e.target.title)
     }
 
     render() {
@@ -30,7 +30,7 @@ class PizzaBase extends Component {
 
             <div>
 
-            <label className="base-label">Select your base</label>
+            <label className="base-label">Select your Sauce</label>
             
 
             <div>
@@ -45,24 +45,24 @@ class PizzaBase extends Component {
                         </tr>
                     </thead>
                     {
-                        base.map(pizzabase=>{
+                        sauce.map(pizzasauce=>{
                             return(
                                 <tbody>
-                                      <tr key={pizzabase.id}>
+                                      <tr key={pizzasauce.id}>
                                             <td >
                                                 <input
-                                                    key={pizzabase.id}
-                                                    value={pizzabase.price}
-                                                    title={pizzabase.name}
-                                                    name={'base'}
+                                                    key={pizzasauce.id}
+                                                    value={pizzasauce.price}
+                                                    title={pizzasauce.name}
+                                                    name={'sauce'}
                                                     type={'radio'}
                                                     onChange={this.handleChange}
                                                    
                                                   /></td>
 
-                                            <td>{pizzabase.id}</td>
-                                            <td>{pizzabase.name}</td>
-                                            <td>&euro; {pizzabase.price}.00</td>
+                                            <td>{pizzasauce.id}</td>
+                                            <td>{pizzasauce.name}</td>
+                                            <td>&euro; {pizzasauce.price}.00</td>
                                         </tr>
 
                                     </tbody>
@@ -81,4 +81,4 @@ class PizzaBase extends Component {
 
 
 
-export default connect(null,{GetSelectedBase})(PizzaBase)
+export default connect(null,{GetSelectedSauce})(PizzaSauce)

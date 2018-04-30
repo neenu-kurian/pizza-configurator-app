@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PizzaBase from './PizzaBase'
+import PizzaSauce from './PizzaSauce'
 
 class PizzaForm extends Component{
 
@@ -11,6 +12,8 @@ render() {
             <br/>
            
             <PizzaBase/>
+            <br/>
+            <PizzaSauce />
             </form>
     )}
 }
