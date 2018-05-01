@@ -18,7 +18,10 @@ class PizzaCheckBox extends Component {
     }
 
     handleChange(e) {
-       
+        if(this.state.checkedtoppings.length>=3){
+            e.target.checked=false
+        }
+        
         if(e.target.checked===true){
         this.setState(
             {checkedtoppings:[...this.state.checkedtoppings,e.target.value],
@@ -43,9 +46,7 @@ class PizzaCheckBox extends Component {
     }
 
     render() {
-        console.log(this.state.checkedtoppings)
-        console.log(this.state.checked)
-        console.log(this)
+       
         return (
             
             <div>
@@ -63,7 +64,7 @@ class PizzaCheckBox extends Component {
                                         value={pizzatopping}
                                         type={'checkbox'}
                                         options={this.state.checkedvalue}
-                                      
+                                        
                                         onChange={this.handleChange}/>{pizzatopping}
                                 </label>
                             )
