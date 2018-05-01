@@ -57,7 +57,7 @@ class PizzaBase extends Component {
 
                                         <td>{pizzabase.id}</td>
                                         <td>{pizzabase.name}</td>
-                                        <td>&euro; {pizzabase.price}.00</td>
+                                        <td>&euro; {pizzabase.price}</td>
                                     </tr>
 
                                 </tbody>

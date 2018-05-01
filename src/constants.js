@@ -49,4 +49,3 @@ export const toppings = [
 ]
 
 
-export const TotalPrice=0;

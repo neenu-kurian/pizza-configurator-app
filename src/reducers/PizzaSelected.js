@@ -6,7 +6,7 @@ import {DELIVERY} from '../actions/types'
 const initialState = {
     base: " ",
     sauce: " ",
-    toppings: " ",
+    toppings:"",
     baseprice:" ",
     sauceprice:" ",
     turbodelivery:false
