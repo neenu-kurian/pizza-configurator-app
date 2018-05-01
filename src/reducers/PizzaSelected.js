@@ -1,5 +1,6 @@
 import {UPDATE_BASE} from '../actions/types'
 import {UPDATE_SAUCE} from '../actions/types'
+import {UPDATE_TOPPINGS} from '../actions/types'
 
 const initialState = {
     base: " ",
@@ -26,6 +27,13 @@ export default function (state = initialState, {type, payload}) {
                 return {
                     ...state,
                     sauce: payload
+                }
+            }
+
+            case UPDATE_TOPPINGS:{
+                return{
+                    ...state,
+                    toppings:payload
                 }
             }
         default:
