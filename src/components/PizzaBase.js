@@ -18,7 +18,7 @@ class PizzaBase extends Component {
 
     handleChange(e) {
 
-       // 
+       
        this.setState({id:e.target.key,name:e.target.title,price:e.target.value})
      
        this.props.GetSelectedBase(e.target.title)
