@@ -4,6 +4,7 @@ import PizzaSauce from './PizzaSauce'
 import PizzaCheckBox from './PizzaCheckBox'
 import {connect} from 'react-redux'
 import GetSelectedToppings from '../actions/GetSelectedToppings'
+import TurboDrone from './TurboDrone'
 
 class PizzaForm extends Component{
 
@@ -20,6 +21,8 @@ render() {
             <PizzaSauce />
             <br/>
             <PizzaCheckBox  />
+            <br/>
+            <TurboDrone />
             </form>
     )}
 }

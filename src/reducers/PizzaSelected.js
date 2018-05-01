@@ -5,8 +5,8 @@ import {UPDATE_TOPPINGS} from '../actions/types'
 const initialState = {
     base: " ",
     sauce: " ",
-    toppings: " ",
-    turbo: " "
+    toppings: " "
+
 }
 
 export default function (state = initialState, {type, payload}) {
@@ -30,10 +30,11 @@ export default function (state = initialState, {type, payload}) {
                 }
             }
 
-            case UPDATE_TOPPINGS:{
-                return{
+        case UPDATE_TOPPINGS:
+            {
+                return {
                     ...state,
-                    toppings:payload
+                    toppings: payload
                 }
             }
         default:

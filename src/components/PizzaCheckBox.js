@@ -10,53 +10,60 @@ class PizzaCheckBox extends Component {
         this.handleChange = this
             .handleChange
             .bind(this)
-        this.state ={
-            checkedtoppings:[],
-            checked:false
-         }
+        this.state = {
+            checkedtoppings: [],
+            checked: false
+        }
 
     }
 
     handleChange(e) {
-        if(this.state.checkedtoppings.length>=3){
-            e.target.checked=false
+
+        if (this.state.checkedtoppings.length >= 3) {
+            e.target.checked = false
         }
-        
-        if(e.target.checked===true){
-        this.setState(
-            {checkedtoppings:[...this.state.checkedtoppings,e.target.value],
-             checked:e.target.checked}
-        )}
-        else{
-            const filterdarray=this.state.checkedtoppings.filter(eachtopping=>eachtopping!==e.target.value)
+
+        if (e.target.checked === true) {
             this.setState({
-                checkedtoppings:filterdarray,
-                checked:e.target.checked
+                checkedtoppings: [
+                    ...this.state.checkedtoppings,
+                    e.target.value
+                ],
+                checked: e.target.checked
             })
-           
+        } else {
+            const filterdarray = this
+                .state
+                .checkedtoppings
+                .filter(eachtopping => eachtopping !== e.target.value)
+            this.setState({checkedtoppings: filterdarray, checked: e.target.checked})
+
         }
-      
+
     }
 
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault()
-       
-        this.props.GetSelectedToppings(this.state.checkedtoppings)
-      
+
+        this
+            .props
+            .GetSelectedToppings(this.state.checkedtoppings)
+
     }
 
     render() {
-       
+
         return (
-            
+
             <div>
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                <label className="base-label">Select your Toppings</label>
-               
-                <div>
-                <br/>
-                    {
-                        toppings.map(pizzatopping => {
+                <form
+                    onSubmit={this
+                    .handleSubmit
+                    .bind(this)}>
+                    <label className="base-label">Select your Toppings</label>
+
+                    <div>
+                        <br/> {toppings.map(pizzatopping => {
                             return (
 
                                 <label key={pizzatopping}>
@@ -64,22 +71,18 @@ class PizzaCheckBox extends Component {
                                         value={pizzatopping}
                                         type={'checkbox'}
                                         options={this.state.checkedvalue}
-                                        
                                         onChange={this.handleChange}/>{pizzatopping}
                                 </label>
                             )
                         })}
 
-                </div>
-                <button type="submit">Add Toppings</button>
-</form>
+                    </div>
+                    <button type="submit">Add Toppings</button>
+                </form>
             </div>
         )
 
-        
     }
 }
-
-
 
 export default connect(null, {GetSelectedToppings})(PizzaCheckBox)
