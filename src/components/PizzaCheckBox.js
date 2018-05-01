@@ -60,7 +60,7 @@ class PizzaCheckBox extends Component {
                     onSubmit={this
                     .handleSubmit
                     .bind(this)}>
-                    <label className="base-label">Select your Toppings</label>
+                    <label className="base-label">Select your Toppings(maximum 3 allowed!)</label>
 
                     <div>
                         <br/> {toppings.map(pizzatopping => {
@@ -76,8 +76,8 @@ class PizzaCheckBox extends Component {
                             )
                         })}
 
-                    </div>
-                    <button type="submit">Add Toppings</button>
+                    </div><br/>
+                    <button type="submit">Add Selected Toppings</button>
                 </form>
             </div>
         )

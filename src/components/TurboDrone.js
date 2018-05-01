@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
+import TurboChecked from '../actions/TurboDelivery'
 
-export default class TurboDroneDelivery extends Component {
+ class TurboDroneDelivery extends Component {
 
     constructor() {
         super()
@@ -19,7 +21,7 @@ export default class TurboDroneDelivery extends Component {
             turbochecked: !this.state.turbochecked
         }))
 
-        
+       this.props.TurboChecked(this.state.turbochecked)
     }
 
     render() {
@@ -34,4 +36,4 @@ export default class TurboDroneDelivery extends Component {
     }
 }
 
-
+export default connect (null,{TurboChecked})(TurboDroneDelivery)

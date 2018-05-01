@@ -1,3 +1,4 @@
 export const UPDATE_BASE="UPDATE_BASE"
 export const UPDATE_SAUCE="UPDATE_SAUCE"
 export const UPDATE_TOPPINGS="UPDATE_TOPPINGS"
+export const DELIVERY="DELIVERY"

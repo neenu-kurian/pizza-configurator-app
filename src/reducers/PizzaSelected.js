@@ -1,11 +1,16 @@
 import {UPDATE_BASE} from '../actions/types'
 import {UPDATE_SAUCE} from '../actions/types'
 import {UPDATE_TOPPINGS} from '../actions/types'
+import {DELIVERY} from '../actions/types'
 
 const initialState = {
     base: " ",
     sauce: " ",
-    toppings: " "
+    toppings: " ",
+    baseprice:" ",
+    sauceprice:" ",
+    turbodelivery:false
+ 
 
 }
 
@@ -18,7 +23,8 @@ export default function (state = initialState, {type, payload}) {
 
                 return {
                     ...state,
-                    base: payload
+                    base: payload.selectedbase,
+                    baseprice:payload.price
                 }
             }
 
@@ -26,7 +32,8 @@ export default function (state = initialState, {type, payload}) {
             {
                 return {
                     ...state,
-                    sauce: payload
+                    sauce: payload.selectedsauce,
+                    sauceprice:payload.price
                 }
             }
 
@@ -34,7 +41,16 @@ export default function (state = initialState, {type, payload}) {
             {
                 return {
                     ...state,
-                    toppings: payload
+                    toppings: payload,
+                    
+                }
+            }
+
+            case DELIVERY:
+            {
+                return{
+                    ...state,
+                    turbodelivery:payload
                 }
             }
         default:

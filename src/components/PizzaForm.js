@@ -23,7 +23,8 @@ render() {
             <PizzaCheckBox  />
             <br/>
             <TurboDrone />
-            </form>
+            <br/>
+         </form>
     )}
 }
 
