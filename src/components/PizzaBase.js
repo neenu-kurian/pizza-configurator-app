@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {base} from '../constants'
 import GetSelectedBase from '../actions/GetSelectedBase'
+import '../styles/PizzaStyle.css'
 
 class PizzaBase extends Component {
 

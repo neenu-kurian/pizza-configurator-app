@@ -1,0 +1,88 @@
+.base-label{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+
+.priceinput{
+    color: black;
+    border-radius: 5px;
+    width:70px;
+    padding-left:10px;
+}
+
+.labelstyle{
+    font-family:sans-serif;
+   
+}
+
+thead th, tfoot th {
+    font-family:sans-serif;
+    text-align: center;
+    color:rgb(49, 78, 126)
+  }
+  
+  th {
+    letter-spacing: 2px;
+    font-family:sans-serif;
+    color:rgb(49, 78, 126)
+  }
+  
+  td {
+    letter-spacing: 1px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-family:sans-serif;
+    color:rgb(49, 78, 126)
+  }
+  
+ 
+
+  table{
+    border-collapse: separate;
+    border-spacing: 100px 0;
+    margin-left:auto; 
+    margin-right:auto;
+    font-family:sans-serif;
+    
+  }
+
+  .sauce-label{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 20px; 
+    font-family:sans-serif;
+  }
+
+  .priceinput,.price{
+      font-size: 20px;
+      font-family:sans-serif;
+  }
+
+  .toppings-label{
+      font-size: 18px;
+      font-family:sans-serif;
+      color:rgb(49, 78, 126)
+  }
+
+  .submitbutton{
+    background-color: rgb(46, 121, 151);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .turbo-label{
+      font-size:18px
+  }
+
+  .toppings-types{
+      font-size: 18px
+  }

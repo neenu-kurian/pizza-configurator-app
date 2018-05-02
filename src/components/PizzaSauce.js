@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {sauce} from '../constants'
 import GetSelectedSauce from '../actions/GetSelectedSauce'
+import '../styles/PizzaStyle.css'
 
 class PizzaSauce extends Component {
 
@@ -30,10 +31,10 @@ class PizzaSauce extends Component {
     render() {
         return (
             <div>
-                <label className="base-label">Select your Sauce</label>
+                <label className="sauce-label">Select your Sauce</label>
                 <div>
                     <br/>
-                    <table className="table-style-three">
+                    <table className="pizzaSauce">
                         <thead>
                             <tr>
                                 <th></th>

@@ -78,8 +78,8 @@ class PizzaCheckBox extends Component {
                         <br/> {toppings.map(pizzatopping => {
                             return (
 
-                                <label key={pizzatopping}>
-                                    <input
+                                <label className="toppings-label" key={pizzatopping}>
+                                    <input className="toppings-types"
                                         value={pizzatopping}
                                         type={'checkbox'}
                                         options={this.state.checkedvalue}

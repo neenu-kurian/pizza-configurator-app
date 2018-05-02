@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import TurboChecked from '../actions/TurboDelivery'
+import '../styles/PizzaStyle.css'
 
  class TurboDroneDelivery extends Component {
 
@@ -32,7 +33,7 @@ import TurboChecked from '../actions/TurboDelivery'
 
         return (
             <div>
-                <label className="base-label">Turbo Drone Delivery?</label>
+                <label className="turbo-label">Turbo Drone Delivery?</label>
                 <input type={'checkbox'} onChange={this.handleChange}/>
 
             </div>
