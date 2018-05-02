@@ -2,6 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {toppings} from '../constants'
 import GetSelectedToppings from '../actions/GetSelectedToppings'
+import RaiseButton from 'material-ui/RaisedButton'
+
+/**
+ * Toppings button style
+ */
+const buttonStyle = {
+    margin: 12,
+}
 
 class PizzaCheckBox extends Component {
     constructor(props)
@@ -77,7 +85,7 @@ class PizzaCheckBox extends Component {
                         })}
 
                     </div><br/>
-                    <button type="submit">Add Selected Toppings</button>
+                    <RaiseButton type="submit" label="Add Selected Toppings" primary={true} style={buttonStyle}/>
                 </form>
             </div>
         )

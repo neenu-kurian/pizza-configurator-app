@@ -8,7 +8,11 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "browserify": "^6.3.2",
+    "reactify": "^0.16.0",
+    "material-ui": "^0.20.0"
+
   },
   "scripts": {
     "start": "react-scripts start",
