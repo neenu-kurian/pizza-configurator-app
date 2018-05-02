@@ -15,7 +15,11 @@ import TurboChecked from '../actions/TurboDelivery'
 
     }
 
-    handleChange(e) {
+    /**
+     * Function to handle turbo delivery event
+     * @param event the event object 
+     */
+    handleChange(event) {
 
         this.setState(turbochecked => ({
             turbochecked: !this.state.turbochecked

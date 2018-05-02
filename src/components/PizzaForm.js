@@ -11,7 +11,6 @@ class PizzaForm extends Component{
 
 
 render() {
-    console.log("inside form")
     return (
         <MuiThemeProvider>
         <form className="container" >

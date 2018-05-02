@@ -14,23 +14,23 @@ class PizzaSauce extends Component {
         this.state = {}
     }
 
-    handleChange(e) {
+    /**
+     * Function to handle Sauce selection event
+     * @param event the event object
+     */
+    handleChange(event) {
 
-        this.setState({id: e.target.key, name: e.target.title, price: e.target.value})
+        this.setState({id: event.target.key, name: event.target.title, price: event.target.value})
 
         this
             .props
-            .GetSelectedSauce(e.target.title,e.target.value)
+            .GetSelectedSauce(event.target.title, event.target.value)
     }
 
     render() {
-        console.log(this.state.price)
         return (
-
             <div>
-
                 <label className="base-label">Select your Sauce</label>
-
                 <div>
                     <br/>
                     <table className="table-style-three">
@@ -59,18 +59,14 @@ class PizzaSauce extends Component {
                                         <td>{pizzasauce.name}</td>
                                         <td>&euro; {pizzasauce.price}</td>
                                     </tr>
-
                                 </tbody>
                             )
-
                         })
 }
                     </table>
                 </div>
             </div>
-
         )
-
     }
 }
 

@@ -8,7 +8,7 @@ import RaiseButton from 'material-ui/RaisedButton'
  * Toppings button style
  */
 const buttonStyle = {
-    margin: 12,
+    margin: 12
 }
 
 class PizzaCheckBox extends Component {
@@ -25,34 +25,41 @@ class PizzaCheckBox extends Component {
 
     }
 
-    handleChange(e) {
+    /**
+     * Function to handle the Topping selection event. It will
+     * prevent the form submission if more than 3 toppings selected
+     * @param event the event object
+     */
+    handleChange(event) {
 
         if (this.state.checkedtoppings.length >= 3) {
-            e.target.checked = false
+            event.target.checked = false
         }
 
-        if (e.target.checked === true) {
+        if (event.target.checked === true) {
             this.setState({
                 checkedtoppings: [
                     ...this.state.checkedtoppings,
-                    e.target.value
+                    event.target.value
                 ],
-                checked: e.target.checked
+                checked: event.target.checked
             })
         } else {
             const filterdarray = this
                 .state
                 .checkedtoppings
-                .filter(eachtopping => eachtopping !== e.target.value)
-            this.setState({checkedtoppings: filterdarray, checked: e.target.checked})
+                .filter(eachtopping => eachtopping !== event.target.value)
+            this.setState({checkedtoppings: filterdarray, checked: event.target.checked})
 
         }
 
     }
 
-    handleSubmit(e) {
-        e.preventDefault()
-
+    /**
+     * Function to submit the toppings selection
+     */
+    handleSubmit(event) {
+        event.preventDefault()
         this
             .props
             .GetSelectedToppings(this.state.checkedtoppings)
@@ -60,16 +67,13 @@ class PizzaCheckBox extends Component {
     }
 
     render() {
-
         return (
-
             <div>
                 <form
                     onSubmit={this
                     .handleSubmit
                     .bind(this)}>
-                    <label className="base-label">Select your Toppings(maximum 3 allowed!)</label>
-
+                    <label className="base-label">Select your Toppings(Maximum 3 allowed!)</label>
                     <div>
                         <br/> {toppings.map(pizzatopping => {
                             return (
@@ -83,9 +87,12 @@ class PizzaCheckBox extends Component {
                                 </label>
                             )
                         })}
-
                     </div><br/>
-                    <RaiseButton type="submit" label="Add Selected Toppings" primary={true} style={buttonStyle}/>
+                    <RaiseButton
+                        type="submit"
+                        label="Add Selected Toppings"
+                        primary={true}
+                        style={buttonStyle}/>
                 </form>
             </div>
         )

@@ -15,8 +15,7 @@ const initialState = {
 }
 
 export default function (state = initialState, {type, payload}) {
-    console.log("inside reducer")
-
+ 
     switch (type) {
         case UPDATE_BASE:
             {

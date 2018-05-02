@@ -14,23 +14,23 @@ class PizzaBase extends Component {
         this.state = {}
     }
 
-    handleChange(e) {
+    /**
+     * Event handler for selecting Piza base.
+     * @param  event the event object
+     */
+    handleChange(event) {
 
-        this.setState({id: e.target.key, name: e.target.title, price: e.target.value})
+        this.setState({id: event.target.key, name: event.target.title, price: event.target.value})
 
         this
             .props
-            .GetSelectedBase(e.target.title,e.target.value)
+            .GetSelectedBase(event.target.title, event.target.value)
     }
 
     render() {
-        console.log(this.state.price)
         return (
-
             <div>
-
                 <label className="base-label">Select your base</label>
-
                 <div>
                     <br/>
                     <table className="table-style-three">
@@ -54,23 +54,18 @@ class PizzaBase extends Component {
                                                 name={'base'}
                                                 type={'radio'}
                                                 onChange={this.handleChange}/></td>
-
                                         <td>{pizzabase.id}</td>
                                         <td>{pizzabase.name}</td>
                                         <td>&euro; {pizzabase.price}</td>
                                     </tr>
-
                                 </tbody>
                             )
-
                         })
 }
                     </table>
                 </div>
             </div>
-
         )
-
     }
 }
 
