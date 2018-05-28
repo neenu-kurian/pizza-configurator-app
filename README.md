@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## Project Title
+## Pizza Configurator
 
 This is a pizza confirguration app. User can select the base, topping and sauce. The price is calculated dynamically . It is possible to edit your choices at any time.
 
